@@ -11,9 +11,8 @@ ReplayMod 的 Minecraft 1.21.1 NeoForge 移植版本，包含录制、回放、�
 | Java | JDK 21 |
 | Yarn mappings | 1.21.1+build.3 |
 | NeoForge mappings patch | Architectury 1.21+build.6 |
-| Gradle | 9.4.1，通过仓库自带 wrapper 使用 |
+| Gradle | 9.4.1，|
 
-原 21.1.215 构建已调整为面向 21.1.209 重新编译，以兼容安装了 NeoForge 21.1.209 的游戏实例。21.1.209 以外的 NeoForge 补丁版本未逐一验证。
 
 ## 获取源码
 
@@ -70,7 +69,6 @@ Linux / macOS：
 - `jGui/`：已适配的 GUI 库源码。
 - `libs/ReplayStudio/`：ReplayStudio 源码和构建入口。
 - [PORTING_1.21.1.md](PORTING_1.21.1.md)：1.21.1 移植记录与此前 21.1.215 的运行验证范围。
-- [NEOFORGE_21.1.209.md](NEOFORGE_21.1.209.md)：21.1.209 兼容修订与编译记录；此修订未重新运行游戏测试。
 
 记录中的本地构建日志、录像、截图、缓存和下载的成品不随源码上传。`.porting/integration/java/` 保留可选开发验证驱动的源码，不会打包进发布模组；其本机输出路径需要开发者按环境调整。
 
