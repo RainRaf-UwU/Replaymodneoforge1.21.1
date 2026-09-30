@@ -1,0 +1,98 @@
+ReplayModNeoForge Minecraft 1.21.1 file inventory
+Compared against NeoForgeReplay-mc-1.21.zip; restored empty submodules listed separately.
+
+Modified original project files
+build.gradle.kts
+root.gradle.kts
+settings.gradle.kts
+src/main/java/com/replaymod/core/ReplayMod.java
+src/main/java/com/replaymod/core/ReplayModMixinConfigPlugin.java
+src/main/java/com/replaymod/core/files/ReplayFilesService.java
+src/main/java/com/replaymod/pathing/player/AbstractTimelinePlayer.java
+src/main/java/com/replaymod/recording/handler/RecordingEventHandler.java
+src/main/java/com/replaymod/recording/mixin/MixinNetHandlerPlayClient.java
+src/main/java/com/replaymod/recording/mixin/MixinWorldClient.java
+src/main/java/com/replaymod/render/blend/mixin/MixinRenderLivingBase.java
+src/main/java/com/replaymod/render/blend/mixin/MixinRenderManager.java
+src/main/java/com/replaymod/render/mixin/MixinRenderManager.java
+src/main/java/com/replaymod/render/mixin/Mixin_LoadIrisOdsShaderPack.java
+src/main/java/com/replaymod/render/rendering/Pipelines.java
+src/main/java/com/replaymod/render/rendering/VideoRenderer.java
+src/main/java/com/replaymod/replay/FullReplaySender.java
+src/main/java/com/replaymod/replay/camera/CameraEntity.java
+src/main/java/com/replaymod/replay/events/ReplayChatMessageEvent.java
+src/main/java/com/replaymod/replay/gui/overlay/GuiMarkerTimeline.java
+src/main/java/com/replaymod/replay/mixin/MixinRenderLivingBase.java
+src/main/java/com/replaymod/replay/mixin/world_border/Mixin_UseReplayTime_ForMovement.java
+src/main/java/com/replaymod/simplepathing/SPTimeline.java
+src/main/java/com/replaymod/simplepathing/gui/GuiEditKeyframe.java
+src/main/java/com/replaymod/simplepathing/gui/GuiPathing.java
+src/main/resources/mixins.compat.mapwriter.replaymod.json
+src/main/resources/mixins.compat.shaders.replaymod.json
+src/main/resources/mixins.core.replaymod.json
+src/main/resources/mixins.extras.playeroverview.replaymod.json
+src/main/resources/mixins.nonmmlauncher.replaymod.json
+src/main/resources/mixins.recording.replaymod.json
+src/main/resources/mixins.render.blend.replaymod.json
+src/main/resources/mixins.render.replaymod.json
+src/main/resources/mixins.replay.replaymod.json
+
+Added NeoForge 1.21.1 target files and report
+PORTING_1.21.1.md
+jGui/versions/1.21.1-neoforge/gradle.properties
+jGui/versions/1.21.1-neoforge/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinGameRenderer.java
+jGui/versions/1.21.1-neoforge/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinKeyboardListener.java
+jGui/versions/1.21.1-neoforge/src/main/java/de/johni0702/minecraft/gui/versions/mixin/Mixin_RenderHudCallback.java
+versions/1.21.1-neoforge/gradle.properties
+versions/1.21.1-neoforge/src/main/java/com/replaymod/core/KeyBindingRegistry.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/core/ReplayModBackend.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/core/SettingsRegistryBackend.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/core/files/ReplayFoldersService.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/core/utils/ModInfoGetter.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/core/versions/LangResourcePack.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/pathing/properties/FovProperty.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/recording/ReplayModRecording.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/render/mixin/MixinParticleManager.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/replay/handler/GuiHandler.java
+versions/1.21.1-neoforge/src/main/java/com/replaymod/replay/mixin/MixinCameraFov.java
+versions/1.21.1-neoforge/src/main/resources/META-INF/neoforge.mods.toml
+versions/1.21.1-neoforge/src/main/resources/mixins.core.replaymod.json
+versions/1.21.1-neoforge/src/main/resources/pack.mcmeta
+versions/1.21.1-neoforge/src/test/java/com/replaymod/simplepathing/FovTimelineTest.java
+
+jGui files adjusted after exact-revision restoration
+jGui/build.gradle.kts
+jGui/root.gradle.kts
+jGui/src/main/java/de/johni0702/minecraft/gui/MinecraftGuiRenderer.java
+jGui/src/main/java/de/johni0702/minecraft/gui/container/AbstractGuiOverlay.java
+jGui/src/main/java/de/johni0702/minecraft/gui/container/AbstractGuiScreen.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/Image.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/MCVer.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/callbacks/KeyboardCallback.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/callbacks/MouseCallback.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinGameRenderer.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinKeyboardListener.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinMinecraft.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinMouseListener.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinScreen.java
+jGui/src/main/java/de/johni0702/minecraft/gui/versions/mixin/Mixin_RenderHudCallback.java
+jGui/src/main/resources/mixins.jgui.json
+jGui/versions/1.21.1-neoforge/gradle.properties
+jGui/versions/1.21.1-neoforge/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinGameRenderer.java
+jGui/versions/1.21.1-neoforge/src/main/java/de/johni0702/minecraft/gui/versions/mixin/MixinKeyboardListener.java
+jGui/versions/1.21.1-neoforge/src/main/java/de/johni0702/minecraft/gui/versions/mixin/Mixin_RenderHudCallback.java
+
+Restored ReplayStudio build entry points
+libs/ReplayStudio/build.gradle.kts
+libs/ReplayStudio/settings.gradle.kts
+
+Additional restored source trees
+jGui/ (082c6357e4cff95ef5b0b0295975c3290580a499)
+libs/ReplayStudio/ (ca00f8101bec034efe77bdb938522aa3b800cf50)
+src/main/resources/assets/replaymod/lang/ (ed16d95cd373d4b5ddd257ea4b30790d2fcff353)
+
+Validation-only scripts and in-game driver
+.porting/*.py, .porting/*.init.gradle
+.porting/integration/java/com/replaymod/porting/PortIntegration.java
+
+Generated outputs/caches/run directories are excluded from this inventory.

@@ -1,0 +1,23 @@
+{
+  "required": false,
+  "package": "com.replaymod.compat.mapwriter.mixin",
+  "mixins": [],
+  "server": [],
+  "client": [
+    //#if MC<11400
+    //$$ "MixinMinecraft"
+    //#endif
+  ],
+  //#if NEOFORGE
+  //$$ "compatibilityLevel": "JAVA_21",
+  //$$ "injectors": { "defaultRequire": 1 },
+  //#else
+  "compatibilityLevel": "JAVA_8",
+  //#endif
+  //#if NEOFORGE
+  //$$ "minVersion": "0.8.7",
+  //#else
+  "minVersion": "0.6.11",
+  //#endif
+  "refmap": "mixins.replaymod.refmap.json"
+}

@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "de.johni0702.minecraft.gui.versions.mixin",
+  "mixins": [],
+  "server": [],
+  "client": [
+    "Mixin_PassEvents_HandleKeybinds",
+    "Mixin_PassEvents_HandleKeys",
+    "Mixin_PassEventsExt",
+    "MixinMouseListener",
+    "MixinKeyboardListener"
+  ],
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.6.11",
+  "refmap": "mixins.jgui.refmap.json"
+}

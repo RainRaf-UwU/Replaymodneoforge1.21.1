@@ -1,0 +1,39 @@
+{
+  "required": false,
+  "package": "com.replaymod.compat.shaders.mixin",
+  //#if NEOFORGE && MC==12101
+  //$$ "plugin": "com.replaymod.core.ReplayModMixinConfigPlugin",
+  //#endif
+  "mixins": [],
+  "server": [],
+  "client": [
+    //#if MC>=11500
+    //#if !NEOFORGE || MC!=12101
+    "MixinChunkVisibility",
+    //#endif
+    //#endif
+    //#if MC>=10800 && MC<11800
+    "MixinShaderRenderChunk",
+    //#endif
+    //#if MC>=10800
+    "MixinShaderEntityRenderer"
+    //#else
+    //$$ "MixinShaders"
+    //#endif
+    //#if !NEOFORGE || MC!=12101
+    ,"MixinShadersRender"
+    //#endif
+  ],
+  //#if NEOFORGE
+  //$$ "compatibilityLevel": "JAVA_21",
+  //$$ "injectors": { "defaultRequire": 1 },
+  //#else
+  "compatibilityLevel": "JAVA_8",
+  //#endif
+  //#if NEOFORGE
+  //$$ "minVersion": "0.8.7",
+  //#else
+  "minVersion": "0.6.11",
+  //#endif
+  "refmap": "mixins.replaymod.refmap.json"
+}

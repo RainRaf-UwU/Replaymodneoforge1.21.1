@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.replaymod.extras.playeroverview.mixin",
+  "mixins": [],
+  "server": [],
+  "client": [
+    "MixinRender"
+  ],
+  //#if NEOFORGE
+  //$$ "compatibilityLevel": "JAVA_21",
+  //$$ "injectors": { "defaultRequire": 1 },
+  //#else
+  "compatibilityLevel": "JAVA_8",
+  //#endif
+  //#if NEOFORGE
+  //$$ "minVersion": "0.8.7",
+  //#else
+  "minVersion": "0.6.11",
+  //#endif
+  "refmap": "mixins.replaymod.refmap.json"
+}
